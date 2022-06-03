@@ -8,8 +8,8 @@ import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:spring1_ui/Employee/profilepage.dart';
-import 'package:spring1_ui/Supervisor/getEmployeeData.dart';
+import 'package:Gestion_Absences_employees/Employee/profilepage.dart';
+import 'package:Gestion_Absences_employees/Supervisor/getEmployeeData.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Employee/attendance.dart';
@@ -17,7 +17,7 @@ import '../FirestoreOperstions.dart';
 import 'excel_operation.dart';
 import 'login.dart';
 // package:spring1_uSupervisor/login.dart
-import 'package:spring1_ui/Supervisor/login.dart';
+import 'package:Gestion_Absences_employees/Supervisor/login.dart';
 
 class Attendance extends StatefulWidget {
   @override

@@ -1,13 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:spring1_ui/Employee/attendance.dart';
-import 'package:spring1_ui/Employee/finance.dart';
-import 'package:spring1_ui/Employee/home_screen.dart';
-import 'package:spring1_ui/main.dart';
+import 'package:Gestion_Absences_employees/Employee/attendance.dart';
+import 'package:Gestion_Absences_employees/Employee/finance.dart';
+import 'package:Gestion_Absences_employees/Employee/home_screen.dart';
+import 'package:Gestion_Absences_employees/main.dart';
 import 'Marquer_presence.dart';
-import 'package:spring1_ui/Employee/profilepage.dart';
-import 'package:spring1_ui/Employee/justification.dart';
-import 'package:spring1_ui/Employee/chatbot.dart';
+import 'package:Gestion_Absences_employees/Employee/profilepage.dart';
+import 'package:Gestion_Absences_employees/Employee/justification.dart';
+import 'package:Gestion_Absences_employees/Employee/chatbot.dart';
 
 import 'headerDrawer.dart';
 

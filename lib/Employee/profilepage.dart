@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 // import 'package:image_picker/image_picker.dart';
-import 'package:spring1_ui/Employee/updateUserProfile.dart';
+import 'package:Gestion_Absences_employees/Employee/updateUserProfile.dart';
 import 'package:path/path.dart';
 
 class ProfilePage extends StatefulWidget {

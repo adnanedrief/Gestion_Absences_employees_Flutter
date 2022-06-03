@@ -4,8 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:spring1_ui/Employee/attendance.dart';
-import 'package:spring1_ui/Supervisor/listofemployee.dart';
+import 'package:Gestion_Absences_employees/Employee/attendance.dart';
+import 'package:Gestion_Absences_employees/Supervisor/listofemployee.dart';
 import 'package:syncfusion_flutter_xlsio/xlsio.dart' as excel;
 
 List COUT = [];
@@ -151,5 +151,3 @@ getinfo(cin, cout, amount) {
     print("No data found");
   }
 }
-
-

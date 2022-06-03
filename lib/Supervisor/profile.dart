@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:spring1_ui/Supervisor/editprofile.dart';
+import 'package:Gestion_Absences_employees/Supervisor/editprofile.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -86,7 +86,8 @@ class _ProfileState extends State<Profile> {
                                           width: 45,
                                         ),
                                         Text(
-                                          document.data()["email"], // display info form firestore 
+                                          document.data()[
+                                              "email"], // display info form firestore
                                           style: TextStyle(fontSize: 15),
                                         )
                                       ],
@@ -171,7 +172,8 @@ class _ProfileState extends State<Profile> {
             ),
             Container(
               child: ElevatedButton(
-                  child: Text("Mise à jour"), onPressed: () => _showUpdatePannel()),
+                  child: Text("Mise à jour"),
+                  onPressed: () => _showUpdatePannel()),
             ),
           ],
         ),

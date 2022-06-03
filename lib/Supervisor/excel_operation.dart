@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:open_file/open_file.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:spring1_ui/Supervisor/getEmployeeData.dart';
+import 'package:Gestion_Absences_employees/Supervisor/getEmployeeData.dart';
 import 'package:syncfusion_flutter_xlsio/xlsio.dart';
 
 void getExcel(String name, String address, String phone, String uid,
@@ -111,13 +111,13 @@ void getExcel(String name, String address, String phone, String uid,
   range8.cellStyle.fontSize = 24;
   range8.cellStyle.hAlign = HAlignType.right;
   range8.cellStyle.bold = true;
-  sheet.getRangeByName("A${count+23}").text =
-        'BlitzUTM, UTMSkudai, Johor, +60 011-1128 0169 | blitz.utm.flutter66@gmail.com';
-  final Range range9 = sheet.getRangeByName('A${count+23}:H${count+24}');
+  sheet.getRangeByName("A${count + 23}").text =
+      'BlitzUTM, UTMSkudai, Johor, +60 011-1128 0169 | blitz.utm.flutter66@gmail.com';
+  final Range range9 = sheet.getRangeByName('A${count + 23}:H${count + 24}');
   range9.cellStyle.backColor = '#ACB9CA';
   range9.merge();
-    range9.cellStyle.hAlign = HAlignType.center;
-    range9.cellStyle.vAlign = VAlignType.center;
+  range9.cellStyle.hAlign = HAlignType.center;
+  range9.cellStyle.vAlign = VAlignType.center;
   // for (var i = 16; i < count; i++) {
   //   print(i - 16 + 1);
   //   sheet.getRangeByName("B$i").setText(CIN[i-16].toString().substring(2,10));

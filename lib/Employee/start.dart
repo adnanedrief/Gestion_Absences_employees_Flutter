@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'package:spring1_ui/Employee/home_screen_drawer.dart';
-import 'package:spring1_ui/Employee/login.dart';
-import 'package:spring1_ui/Employee/signup.dart';
-import 'package:spring1_ui/Supervisor/login.dart';
+import 'package:Gestion_Absences_employees/Employee/home_screen_drawer.dart';
+import 'package:Gestion_Absences_employees/Employee/login.dart';
+import 'package:Gestion_Absences_employees/Employee/signup.dart';
+import 'package:Gestion_Absences_employees/Supervisor/login.dart';
 
 class start extends StatefulWidget {
   const start({Key? key}) : super(key: key);
@@ -39,8 +39,8 @@ class _startState extends State<start> {
               Container(
                 height: MediaQuery.of(context).size.height / 3,
                 decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage("images/emp.png"))),
+                    image:
+                        DecorationImage(image: AssetImage("images/emp.png"))),
               ),
               Column(
                 children: <Widget>[
@@ -79,7 +79,6 @@ class _startState extends State<start> {
                   SizedBox(
                     height: 20,
                   ),
-                  
                 ],
               )
             ],

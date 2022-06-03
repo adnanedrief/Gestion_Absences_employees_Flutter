@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:spring1_ui/Supervisor/DashBoard.dart';
+import 'package:Gestion_Absences_employees/Supervisor/DashBoard.dart';
 
 class LoginPage extends StatefulWidget {
   @override

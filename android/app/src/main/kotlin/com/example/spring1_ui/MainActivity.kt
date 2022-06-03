@@ -1,4 +1,4 @@
-package com.example.spring1_ui
+package com.example.Gestion_Absences_employees
 
 import io.flutter.embedding.android.FlutterActivity
 

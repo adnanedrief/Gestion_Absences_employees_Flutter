@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:spring1_ui/Supervisor/login.dart';
-import 'package:spring1_ui/Supervisor/signup.dart';
+import 'package:Gestion_Absences_employees/Supervisor/login.dart';
+import 'package:Gestion_Absences_employees/Supervisor/signup.dart';
 
 class Home extends StatelessWidget {
   @override

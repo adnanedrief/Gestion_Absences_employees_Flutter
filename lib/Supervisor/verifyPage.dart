@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:email_auth/email_auth.dart';
-import 'package:spring1_ui/Supervisor/home.dart';
-import 'package:spring1_ui/Supervisor/login.dart';
+import 'package:Gestion_Absences_employees/Supervisor/home.dart';
+import 'package:Gestion_Absences_employees/Supervisor/login.dart';
 
 class verifyPage extends StatefulWidget {
   @override

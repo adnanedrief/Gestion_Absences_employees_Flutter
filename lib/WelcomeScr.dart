@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:spring1_ui/Employee/start.dart';
-import 'package:spring1_ui/Supervisor/home.dart';
+import 'package:Gestion_Absences_employees/Employee/start.dart';
+import 'package:Gestion_Absences_employees/Supervisor/home.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
               Column(
                 children: <Widget>[
                   Text(
-                    "Gestion HR",
+                    "Gestion Absences employees",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                   ),
                   SizedBox(
@@ -54,7 +54,6 @@ class HomePage extends StatelessWidget {
                         color: Color.fromARGB(255, 215, 67, 67),
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                           
                             borderRadius: BorderRadius.circular(50)),
                         child: Text(
                           "EMPLOYÉ",

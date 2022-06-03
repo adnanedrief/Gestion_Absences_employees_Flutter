@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:spring1_ui/Supervisor/addemployee.dart';
-import 'package:spring1_ui/Supervisor/info.dart';
-import 'package:spring1_ui/Supervisor/profile.dart';
-import 'package:spring1_ui/Supervisor/listofemployee.dart';
-import 'package:spring1_ui/WelcomeScr.dart';
+import 'package:Gestion_Absences_employees/Supervisor/addemployee.dart';
+import 'package:Gestion_Absences_employees/Supervisor/info.dart';
+import 'package:Gestion_Absences_employees/Supervisor/profile.dart';
+import 'package:Gestion_Absences_employees/Supervisor/listofemployee.dart';
+import 'package:Gestion_Absences_employees/WelcomeScr.dart';
 import '../main.dart';
 
 class Dashboard extends StatelessWidget {

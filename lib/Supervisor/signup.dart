@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:spring1_ui/FirestoreOperstions.dart';
-import 'package:spring1_ui/Supervisor/DashBoard.dart';
+import 'package:Gestion_Absences_employees/FirestoreOperstions.dart';
+import 'package:Gestion_Absences_employees/Supervisor/DashBoard.dart';
 
 import 'verifyPage.dart';
 
@@ -327,7 +327,6 @@ class _SignupPageState extends State<SignupPage> {
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
                   )
                 ],
-                
               )
             ],
           ),

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:spring1_ui/Employee/home_screen_drawer.dart';
+import 'package:Gestion_Absences_employees/Employee/home_screen_drawer.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -157,7 +157,8 @@ class _LoginState extends State<Login> {
                         strutStyle: StrutStyle(
                           fontWeight: FontWeight.bold,
                         ),
-                        style: TextStyle(color: Color.fromARGB(255, 215, 67, 67)),
+                        style:
+                            TextStyle(color: Color.fromARGB(255, 215, 67, 67)),
                         // style: GoogleFonts.getFont("Lato",
                         //     fontWeight: FontWeight.bold,
                         //     color: Color.fromARGB(255, 215, 67, 67)Accent[700]),
@@ -173,7 +174,6 @@ class _LoginState extends State<Login> {
                               MaterialPageRoute(
                                   builder: (context) => HomePage()));
                         }
-                      
                       }),
                 ],
               ),
