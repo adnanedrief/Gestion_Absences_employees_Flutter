@@ -81,7 +81,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                                   child: checkprofile(document
                                                       .data()["profile pic"])
 
-                                                  // (Image.network(document.data()["profile pic"])==null)
+                                                  // (Image.network(documentdocument.data()["profile pic"])==null)
                                                   // ?  Image.file(
                                                   //         _image,
                                                   //         fit: BoxFit.fill,

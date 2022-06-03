@@ -424,7 +424,7 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Enregistrement : ",
+                                  Text("L\'entrée : ",
                                       style: TextStyle(fontSize: 20)),
                                   formaDtate2(
                                       document.data()["check in"].toString()),
@@ -436,7 +436,7 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Vérifier :",
+                                  Text("Sortie :",
                                       style: TextStyle(fontSize: 20)),
                                   formaDtate2(
                                       document.data()["check out"].toString()),
@@ -552,7 +552,7 @@ Widget formaDtate2(String time) {
     var today = DateTime.now().toString();
     if (date == today.substring(0, 10)) {
       return Text(
-        date + " At " + hours,
+        date + " à " + hours,
         textAlign: TextAlign.center,
         style: TextStyle(
             fontSize: 20,
@@ -566,7 +566,7 @@ Widget formaDtate2(String time) {
       );
     } else {
       return Text(
-        date + " At " + hours,
+        date + " à " + hours,
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 20),
       );
