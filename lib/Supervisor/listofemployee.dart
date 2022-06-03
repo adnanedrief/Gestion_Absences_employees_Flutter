@@ -382,7 +382,7 @@ class _DetailPageState extends State<DetailPage> {
       ),
       appBar: AppBar(
         title: Text(
-            "Record de ${widget.selectedUser.data()["Fullname"].toString().toUpperCase()}"),
+            "Infos sur ${widget.selectedUser.data()["Fullname"].toString().toUpperCase()}"),
       ),
       body: Container(
         child: Center(
@@ -424,7 +424,7 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("L\'entrée : ",
+                                  Text("Dernière Entrée : ",
                                       style: TextStyle(fontSize: 20)),
                                   formaDtate2(
                                       document.data()["check in"].toString()),
@@ -436,7 +436,7 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text("Sortie :",
+                                  Text("Dernière Sortie :",
                                       style: TextStyle(fontSize: 20)),
                                   formaDtate2(
                                       document.data()["check out"].toString()),
@@ -454,40 +454,10 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  ElevatedButton(
-                                    child: Text("Entrer",
-                                        style: TextStyle(fontSize: 20)),
-                                    onPressed: () {
-                                      checkinButton();
-                                    },
-                                    style: ButtonStyle(
-                                        elevation:
-                                            MaterialStateProperty.all<double>(
-                                                10),
-                                        backgroundColor:
-                                            MaterialStateProperty.all<Color>(
-                                                Color.fromARGB(
-                                                    255, 215, 67, 67))),
-                                  ),
-                                  SizedBox(
+                                                                    SizedBox(
                                     width: 30,
                                   ),
-                                  ElevatedButton(
-                                    child: Text("Sortie",
-                                        style: TextStyle(fontSize: 20)),
-                                    onPressed: () {
-                                      checkoutButton();
-                                    },
-                                    style: ButtonStyle(
-                                        elevation:
-                                            MaterialStateProperty.all<double>(
-                                                10),
-                                        backgroundColor:
-                                            MaterialStateProperty.all<Color>(
-                                                Color.fromARGB(
-                                                    255, 215, 67, 67))),
-                                  )
-                                ],
+                                                                 ],
                               ),
                               SizedBox(
                                 height: 20,
