@@ -315,7 +315,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Container(
                 child: ElevatedButton(
-                    child: Text("Update Info"),
+                    child: Text("Mise à jour des infos"),
                     onPressed: () => _showUpdatePannel()),
               ),
               // SizedBox(
