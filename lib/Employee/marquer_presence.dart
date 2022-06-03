@@ -94,9 +94,9 @@ class _Marquer_presenceState extends State<Marquer_presence> {
                 icon: Icons.add_to_home_screen_rounded,
                 onClicked: () async {
                   //if (countEntrer == 1) {
-                    await Marquer_Entrer();
-                   // countEntrer--;
-                    AlertEntree(context);
+                  await Marquer_Entrer();
+                  // countEntrer--;
+                  AlertEntree(context);
                   //}
                 },
               ),
@@ -106,11 +106,11 @@ class _Marquer_presenceState extends State<Marquer_presence> {
                 text: 'Marquer la sortie',
                 icon: Icons.add_to_home_screen,
                 onClicked: () async {
-                 // if (countSortie == 1) {
-                    await Marquer_Sortie();
-                    //countSortie--;
-                    AlertSortie(context);
-                 // }
+                  // if (countSortie == 1) {
+                  await Marquer_Sortie();
+                  //countSortie--;
+                  AlertSortie(context);
+                  // }
                 },
               ),
             ],
@@ -169,15 +169,6 @@ class _Marquer_presenceState extends State<Marquer_presence> {
           "check in": checkin.toString(),
         });
       });
-      // FirebaseFirestore.instance
-      //     .collection("Employee")
-      //     .doc(uid)
-      //     .collection("History")
-      //     .add({
-      //   'check in': checkin.toString(),
-      //   "check out": checkin.toString(),
-      //   "current amount": 0,
-      // });
       return true;
     } catch (e) {
       return false;
@@ -209,6 +200,7 @@ class _Marquer_presenceState extends State<Marquer_presence> {
 }
 
 Future<void> setAttendeceHistory(DateTime checkout, String uid) async {
+   var toDouble;
   FirebaseFirestore.instance
       .collection('Employee')
       .where("uid", isEqualTo: uid)
@@ -217,6 +209,21 @@ Future<void> setAttendeceHistory(DateTime checkout, String uid) async {
     querySnapshot.docs.forEach((doc) {
       String checkin = doc["check in"];
       print("Check in : " + doc["check in"]);
+      Duration difference = checkout.difference(DateTime.parse(checkin));
+
+      print(difference.inHours);
+     
+      if (!difference.isNegative) {
+        var diff = difference.inSeconds
+            .toString(); // for now set as seconds(demo purpose)
+        print(diff);
+        var hours = double.parse(diff);
+        var Total = hours * 3;
+        var Ftotal = Total.toStringAsFixed(2);
+        toDouble = double.parse(Ftotal);
+        print(Total);
+        print(Ftotal);
+      }
 
       FirebaseFirestore.instance
           .collection("Employee")
@@ -225,8 +232,29 @@ Future<void> setAttendeceHistory(DateTime checkout, String uid) async {
           .add({
         "check in": checkin.toString(),
         "check out": checkout.toString(),
-        "current amount": 0,
+        "current amount": toDouble,
       });
     });
+
+     // var value = double.parse(Amount);
+      DocumentReference documentReference1 = FirebaseFirestore.instance
+          .collection("Employee")
+          .doc(uid);
+
+      FirebaseFirestore.instance.runTransaction((transaction) async {
+        DocumentSnapshot snapshot1 = await transaction.get(documentReference1);
+      
+        if (!snapshot1.exists) {
+          documentReference1.set({"Total Amount": toDouble});
+          return true;
+        } else {
+          var newAmount = snapshot1.data()["Total Amount"] + toDouble;
+
+          transaction.update(documentReference1, {"Total Amount": newAmount});
+
+          return true;
+        }
+      });
   });
+  
 }
