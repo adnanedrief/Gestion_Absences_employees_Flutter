@@ -93,11 +93,11 @@ class _Marquer_presenceState extends State<Marquer_presence> {
                 text: 'Marquer l\'entrée',
                 icon: Icons.add_to_home_screen_rounded,
                 onClicked: () async {
-                  if (countEntrer == 1) {
+                  //if (countEntrer == 1) {
                     await Marquer_Entrer();
-                    countEntrer--;
+                   // countEntrer--;
                     AlertEntree(context);
-                  }
+                  //}
                 },
               ),
               SizedBox(height: 8),
@@ -106,11 +106,11 @@ class _Marquer_presenceState extends State<Marquer_presence> {
                 text: 'Marquer la sortie',
                 icon: Icons.add_to_home_screen,
                 onClicked: () async {
-                  if (countSortie == 1) {
+                 // if (countSortie == 1) {
                     await Marquer_Sortie();
-                    countSortie--;
+                    //countSortie--;
                     AlertSortie(context);
-                  }
+                 // }
                 },
               ),
             ],

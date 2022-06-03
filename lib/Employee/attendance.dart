@@ -45,8 +45,8 @@ class _AttendanceHistoryState extends State<AttendanceHistory> {
       print(toDate);
 
       _groupedEvents[toDate] = events.toList();
-      _groupedEvents[toDate]!.add("Entrer à" + cinTime);
-      _groupedEvents[toDate]!.add("Sortie à" + coutTime);
+      _groupedEvents[toDate]!.add("Dernière Entrer à" + cinTime);
+      _groupedEvents[toDate]!.add("Dernière Sortie à" + coutTime);
 
       // _groupedEvents[DateTime.parse(date)]!.add("Attended");
     }
@@ -211,7 +211,7 @@ class _AttendanceHistoryState extends State<AttendanceHistory> {
                                     color: Colors.black,
                                   ),
                                   title: Text(
-                                    "Nombre total de jours assistés: ${_groupedEvents.length} Journées",
+                                    "Nombre total de votre présence est : ${_groupedEvents.length} fois ",
                                     style: TextStyle(fontSize: 20),
                                   )))
                         ],

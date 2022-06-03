@@ -454,10 +454,10 @@ class _DetailPageState extends State<DetailPage> {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                                                    SizedBox(
+                                  SizedBox(
                                     width: 30,
                                   ),
-                                                                 ],
+                                ],
                               ),
                               SizedBox(
                                 height: 20,

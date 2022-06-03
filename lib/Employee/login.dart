@@ -148,7 +148,7 @@ class _LoginState extends State<Login> {
                 children: [
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.black,
+                        primary: Color.fromARGB(255, 215, 67, 67),
                         onPrimary: Colors.white,
                         padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
                       ),
@@ -158,7 +158,7 @@ class _LoginState extends State<Login> {
                           fontWeight: FontWeight.bold,
                         ),
                         style:
-                            TextStyle(color: Color.fromARGB(255, 215, 67, 67)),
+                            TextStyle(color: Color.fromARGB(255, 255, 255, 255)),
                         // style: GoogleFonts.getFont("Lato",
                         //     fontWeight: FontWeight.bold,
                         //     color: Color.fromARGB(255, 215, 67, 67)Accent[700]),
