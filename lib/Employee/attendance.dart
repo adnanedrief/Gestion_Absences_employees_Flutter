@@ -3,6 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 List events = [];
 
@@ -57,6 +60,7 @@ class _AttendanceHistoryState extends State<AttendanceHistory> {
   @override
   Widget build(BuildContext context) {
     String date = "today", checkin = "today", checkout = "today";
+    initializeDateFormatting('fr_FR', null);
 
     return Scaffold(
         body: ListView(children: [
@@ -66,7 +70,7 @@ class _AttendanceHistoryState extends State<AttendanceHistory> {
             height: 30,
           ),
           Text(
-            "Ma présence",
+            "Mes présence",
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -123,6 +127,8 @@ class _AttendanceHistoryState extends State<AttendanceHistory> {
                           ),
                           Card(
                             child: TableCalendar(
+                             
+                              locale: "fr_FR",
                               calendarStyle: CalendarStyle(
                                   markersColor:
                                       Color.fromARGB(255, 215, 67, 67),

@@ -273,7 +273,7 @@ class _DetailPageState extends State<DetailPage> {
           .toString(); // for now set as seconds(demo purpose)
       print(diff);
       var hours = double.parse(diff);
-      Total = hours * 0.02;
+      Total = hours * 50;
       var Ftotal = Total.toStringAsFixed(2);
       var toDouble = double.parse(Ftotal);
       print(Total);
