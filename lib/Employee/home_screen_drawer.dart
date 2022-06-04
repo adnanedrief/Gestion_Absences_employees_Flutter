@@ -5,6 +5,7 @@ import 'package:Gestion_Absences_employees/Employee/finance.dart';
 import 'package:Gestion_Absences_employees/Employee/home_screen.dart';
 import 'package:Gestion_Absences_employees/main.dart';
 import 'Marquer_presence.dart';
+import 'Mes_conges.dart';
 import 'package:Gestion_Absences_employees/Employee/profilepage.dart';
 import 'package:Gestion_Absences_employees/Employee/justification.dart';
 import 'package:Gestion_Absences_employees/Employee/chatbot.dart';
@@ -50,6 +51,9 @@ class _HomePageState extends State<HomePage> {
 
     } else if (currentPage == DrawerSections.chatbot) {
       container = Chatbot(); //
+    }
+    else if (currentPage == DrawerSections.mes_conges) {
+      container = Mes_conges(); //
     } else if (currentPage == DrawerSections.logout) {
       // Navigator.pop(context);
       _logout();
@@ -100,13 +104,15 @@ class _HomePageState extends State<HomePage> {
           menuItem(5, "Marquer ma présence", Icons.check,
               currentPage == DrawerSections.marquer_presence ? true : false),
           Divider(),
-          menuItem(6, "Justif d'absence", Icons.file_upload,
+          menuItem(6, "Mes congées", Icons.house,
+              currentPage == DrawerSections.mes_conges ? true : false),
+          menuItem(7, "Justif d'absence", Icons.file_upload,
               currentPage == DrawerSections.justification ? true : false),
           Divider(),
-          menuItem(7, "ChatBot", Icons.chat,
+          menuItem(8, "ChatBot", Icons.chat,
               currentPage == DrawerSections.chatbot ? true : false),
           Divider(),
-          menuItem(8, "Se déconnecter", Icons.lock_open_rounded,
+          menuItem(9, "Se déconnecter", Icons.lock_open_rounded,
               currentPage == DrawerSections.logout ? true : false),
         ],
       ),
@@ -130,11 +136,15 @@ class _HomePageState extends State<HomePage> {
               currentPage = DrawerSections.attendance;
             } else if (id == 5) {
               currentPage = DrawerSections.marquer_presence;
-            } else if (id == 6) {
+            }
+            else if (id == 6) {
+              currentPage = DrawerSections.mes_conges;
+            }
+             else if (id == 7) {
               currentPage = DrawerSections.justification;
-            } else if (id == 7) {
-              currentPage = DrawerSections.chatbot;
             } else if (id == 8) {
+              currentPage = DrawerSections.chatbot;
+            } else if (id == 9) {
               currentPage = DrawerSections.logout;
             }
           });
@@ -177,4 +187,5 @@ enum DrawerSections {
   justification,
   chatbot,
   marquer_presence,
+  mes_conges,
 }
